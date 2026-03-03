@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación 72 Años - Zacarias</title>
+    
+    <!-- Título de la pestaña -->
+    <title>Invitación 72 años - Zacarias</title>
+
+    <!-- Meta Tags para WhatsApp (Open Graph) -->
+    <meta property="og:title" content="Invitación 72 años - Zacarias">
+    <meta property="og:description" content="Te invito de corazón a celebrar mis 72 primaveras este sábado 14 de marzo a las 2:00 PM.">
+    <!-- IMPORTANTE: Asegúrate de subir una imagen llamada preview.jpg a tu GitHub -->
+    <meta property="og:image" content="https://albertocondor.github.io/zcc-cumpleanos/preview.jpg">
+    <meta property="og:url" content="https://albertocondor.github.io/zcc-cumpleanos/">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -100,7 +111,6 @@
             transform: rotate(12deg);
             filter: drop-shadow(2px 4px 5px rgba(0,0,0,0.5));
         }
-        /* Animación para el botón de música cuando suena */
         .pulse-gold {
             animation: pulse-border 2s infinite;
         }
@@ -160,6 +170,7 @@
                 <p class="text-sm font-light tracking-wider leading-relaxed">
                     Urb. Esmeralda 2da Etapa<br>
                     <span class="font-bold text-lg gold-text">Mz N Lote 12 - Carabayllo</span>
+                    <br><span class="text-xs opacity-60 mt-1 block">Zacarias</span>
                 </p>
             </div>
         </div>
@@ -173,7 +184,7 @@
                 <span id="musicText">Escuchar Serenata</span>
             </button>
 
-            <a href="https://wa.me/51990833172?text=¡Hola!%20Qué%20bonita%20invitación.%20Confirmo%20con%20mucho%20gusto%20mi%20asistencia%20al%20cumpleaños%2072." target="_blank" class="btn-action btn-rsvp">
+            <a href="https://wa.me/51999999999?text=¡Hola%20Zacarias!%20Qué%20bonita%20invitación.%20Confirmo%20con%20mucho%20gusto%20mi%20asistencia%20al%20cumpleaños." target="_blank" class="btn-action btn-rsvp">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.312 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884 0 2.225.569 3.967 1.694 5.671l-.999 3.646 3.874-.97zm11.367-7.843c-.293-.146-1.736-.857-2.004-.954-.269-.098-.465-.146-.661.146-.196.293-.758.954-.929 1.15-.171.196-.341.22-.635.073-.293-.146-1.239-.457-2.361-1.458-.871-.777-1.459-1.738-1.63-2.031-.171-.293-.018-.452.129-.597.132-.131.293-.341.44-.512.147-.171.196-.293.293-.488.098-.196.049-.366-.024-.512-.073-.146-.661-1.592-.905-2.177-.238-.569-.479-.492-.661-.501-.171-.009-.366-.01-.562-.01-.196 0-.513.073-.781.366-.269.293-1.025 1.001-1.025 2.441 0 1.439 1.049 2.831 1.196 3.027.146.196 2.064 3.152 5.001 4.423.699.303 1.244.483 1.67.619.701.223 1.339.191 1.843.116.562-.083 1.736-.708 1.981-1.391.244-.684.244-1.269.171-1.391-.073-.122-.269-.196-.561-.341z"/></svg>
                 Confirmar Asistencia
             </a>
@@ -210,13 +221,6 @@
                 isPlaying = false;
             }
         });
-
-        // Asegurar que el audio se detenga si se cierra la pestaña o similar
-        window.addEventListener('blur', () => {
-            // Opcional: pausar si el usuario cambia de app
-            // audio.pause();
-        });
     </script>
 </body>
-
 </html>
