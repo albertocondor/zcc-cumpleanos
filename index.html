@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación 72 Años - Serenata Condemayta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-blue: #041221;
+            --gold-light: #f3e5ab;
+        }
+        body {
+            background-color: var(--dark-blue);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold-light);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .main-card {
+            width: 100%;
+            max-width: 450px;
+            background: radial-gradient(circle at center, #0a254a 0%, #041221 100%);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 24px;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+            margin: 1.5rem;
+        }
+        .gold-text {
+            background: linear-gradient(to bottom, #f3e5ab 0%, #d4af37 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Cinzel', serif;
+        }
+        .sparkle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--gold);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: twinkle 4s infinite ease-in-out;
+            opacity: 0.5;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.1; transform: scale(0.7) rotate(0deg); }
+            50% { opacity: 0.8; transform: scale(1.2) rotate(15deg); }
+        }
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .btn-rsvp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border: none;
+        }
+        .btn-music {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+            color: var(--dark-blue);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .btn-action:active {
+            transform: scale(0.92);
+        }
+        .number-display {
+            font-size: 8.5rem;
+            line-height: 0.9;
+            margin: 1.5rem 0;
+            font-weight: 900;
+            position: relative;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+        }
+        .hat-icon {
+            position: absolute;
+            top: -15px;
+            right: 18%;
+            width: 55px;
+            transform: rotate(12deg);
+            filter: drop-shadow(2px 4px 5px rgba(0,0,0,0.5));
+        }
+        /* Animación para el botón de música cuando suena */
+        .pulse-gold {
+            animation: pulse-border 2s infinite;
+        }
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Audio de Fondo -->
+    <audio id="bgMusic" loop>
+        <source src="Serenata Condemaytav2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="main-card">
+        <!-- Destellos Decorativos -->
+        <div class="sparkle" style="top: 8%; left: 8%;"></div>
+        <div class="sparkle" style="top: 12%; right: 10%; animation-delay: 1.5s;"></div>
+        <div class="sparkle" style="bottom: 15%; left: 12%; animation-delay: 2.5s;"></div>
+        <div class="sparkle" style="bottom: 5%; right: 15%; animation-delay: 0.5s;"></div>
+
+        <header class="mb-4">
+            <p class="uppercase tracking-[0.4em] text-[10px] mb-2 opacity-70">Te invito de corazón a celebrar</p>
+            <h2 class="text-3xl font-light tracking-widest uppercase gold-text">Mis 72 Primaveras</h2>
+        </header>
+
+        <div class="number-display">
+            <svg class="hat-icon" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 10 L15 110 L85 110 Z" fill="#d4af37" />
+                <path d="M50 10 L35 110 L65 110 Z" fill="#b8860b" />
+                <circle cx="50" cy="10" r="10" fill="#f3e5ab" />
+                <path d="M15 110 Q50 125 85 110" fill="none" stroke="#f3e5ab" stroke-width="2" />
+            </svg>
+            <span class="gold-text">72!</span>
+        </div>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="text-4xl gold-text font-bold mb-3 uppercase tracking-tighter">Marzo</h3>
+                <div class="flex items-center justify-center gap-8">
+                    <div class="text-center">
+                        <p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Sábado</p>
+                        <p class="text-3xl font-bold">14</p>
+                    </div>
+                    <div class="h-10 w-[1px] bg-white/20"></div>
+                    <div class="text-center">
+                        <p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Hora</p>
+                        <p class="text-3xl font-bold">2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-5 px-4 border-y border-white/5 bg-white/5 rounded-lg">
+                <p class="text-sm font-light tracking-wider leading-relaxed">
+                    Urb. Esmeralda 2da Etapa<br>
+                    <span class="font-bold text-lg gold-text">Mz N Lote 12 - Carabayllo</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Botones de Interacción -->
+        <div class="mt-10 space-y-4">
+            <button id="playBtn" class="btn-action btn-music">
+                <span id="musicIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </span> 
+                <span id="musicText">Escuchar Serenata</span>
+            </button>
+
+            <a href="https://wa.me/51999999999?text=¡Hola!%20Qué%20bonita%20invitación.%20Confirmo%20con%20mucho%20gusto%20mi%20asistencia%20al%20cumpleaños%2072." target="_blank" class="btn-action btn-rsvp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.312 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884 0 2.225.569 3.967 1.694 5.671l-.999 3.646 3.874-.97zm11.367-7.843c-.293-.146-1.736-.857-2.004-.954-.269-.098-.465-.146-.661.146-.196.293-.758.954-.929 1.15-.171.196-.341.22-.635.073-.293-.146-1.239-.457-2.361-1.458-.871-.777-1.459-1.738-1.63-2.031-.171-.293-.018-.452.129-.597.132-.131.293-.341.44-.512.147-.171.196-.293.293-.488.098-.196.049-.366-.024-.512-.073-.146-.661-1.592-.905-2.177-.238-.569-.479-.492-.661-.501-.171-.009-.366-.01-.562-.01-.196 0-.513.073-.781.366-.269.293-1.025 1.001-1.025 2.441 0 1.439 1.049 2.831 1.196 3.027.146.196 2.064 3.152 5.001 4.423.699.303 1.244.483 1.67.619.701.223 1.339.191 1.843.116.562-.083 1.736-.708 1.981-1.391.244-.684.244-1.269.171-1.391-.073-.122-.269-.196-.561-.341z"/></svg>
+                Confirmar Asistencia
+            </a>
+        </div>
+
+        <footer class="mt-8">
+            <p class="text-[9px] opacity-40 uppercase tracking-[0.3em]">Será un honor contar contigo</p>
+        </footer>
+    </div>
+
+    <script>
+        const audio = document.getElementById('bgMusic');
+        const playBtn = document.getElementById('playBtn');
+        const musicIcon = document.getElementById('musicIcon');
+        const musicText = document.getElementById('musicText');
+
+        let isPlaying = false;
+
+        playBtn.addEventListener('click', () => {
+            if (!isPlaying) {
+                audio.play().then(() => {
+                    musicIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+                    musicText.textContent = 'Pausar Música';
+                    playBtn.classList.add('pulse-gold');
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log("Error al reproducir audio:", error);
+                });
+            } else {
+                audio.pause();
+                musicIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+                musicText.textContent = 'Seguir Escuchando';
+                playBtn.classList.remove('pulse-gold');
+                isPlaying = false;
+            }
+        });
+
+        // Asegurar que el audio se detenga si se cierra la pestaña o similar
+        window.addEventListener('blur', () => {
+            // Opcional: pausar si el usuario cambia de app
+            // audio.pause();
+        });
+    </script>
+</body>
+</html>
